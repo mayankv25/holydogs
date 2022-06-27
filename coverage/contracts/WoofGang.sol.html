@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/WoofGang.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> WoofGang.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>41/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.38% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>27/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>44/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+// Creator: The Systango Team
+pragma solidity ^0.8.2;
+&nbsp;
+import "@openzeppelin/contracts/utils/Strings.sol";
+import "./AbstractWoofGang.sol";
+&nbsp;
+contract WoofGang is AbstractWoofGang {
+    
+    // Name of the token
+    string public name;
+&nbsp;
+    // Symbol of the token
+    string public symbol;
+    
+    // Set the mint end time
+    uint256 public mintEndTime;
+&nbsp;
+    //Total supply which will increase after mint and airdrops
+    uint16 public totalSupply;
+&nbsp;
+    // Mint Price for token id 
+    uint256 public mintPrice;
+&nbsp;
+    //Base token Uri
+    string public baseUri;
+&nbsp;
+    // As token is an NFT so the minting amount will always be one
+    uint8 constant NFT_AMOUNT = 1;
+&nbsp;
+    // Maximum supply which we are using
+    uint16 constant MAX_SUPPLY = 999;    
+&nbsp;
+    // Zero Address
+    address constant ZERO_ADDRESS = address(0);
+&nbsp;
+&nbsp;
+    constructor(
+        string memory _name, 
+        string memory _symbol,
+        string memory _uri,
+        uint256 _mintEndTime,
+        uint256 _mintPrice
+        
+    ) ERC1155("") Random(MAX_SUPPLY) {
+        name = _name;
+        symbol = _symbol;
+        baseUri = _uri;
+        mintEndTime = _mintEndTime;
+        mintPrice = _mintPrice;
+    }
+&nbsp;
+    /// @dev This is the function to update the Base URI 
+    /// @dev Only the owner can call this function
+    /// @param newBaseUri New Base URI 
+&nbsp;
+    function updateBaseURI(string memory newBaseUri) external override onlyOwner whenNotPaused 
+    {
+        require(keccak256(abi.encodePacked(baseUri)) != keccak256(abi.encodePacked(newBaseUri)) , "WoofGang: Current state is already what you have selected.");
+        baseUri = newBaseUri;
+    }
+&nbsp;
+    /// @dev This is the function to update the mint nft end time
+    /// @dev Only the owner can call this function
+    /// @param newMintEndTime Adding updated Timing for Mint NFT 
+&nbsp;
+    function updateEndTime(uint256 newMintEndTime) external override onlyOwner whenNotPaused 
+    {
+        require(keccak256(abi.encodePacked(mintEndTime)) != keccak256(abi.encodePacked(newMintEndTime)) , "WoofGang: Current state is already what you have selected.");
+        require(block.timestamp &lt;= mintEndTime , "WoofGang: Mint process is ended");
+        mintEndTime = newMintEndTime;
+    }
+&nbsp;
+    /// @dev The public function for getting the URI string based on token id 
+    /// @param id The id of the token whose URI should be get 
+&nbsp;
+    function uri(uint id) public view virtual override(ERC1155)  returns (string memory) 
+    {
+        return string(abi.encodePacked(baseUri,Strings.toString(id),".json"));
+    }
+&nbsp;
+    /// @dev This is the function to update the nft price
+    /// @dev Only the owner can call this function
+    /// @param newMintPrice Adding updated NFT Price 
+&nbsp;
+    function updateMintPrice (uint256 newMintPrice) public override onlyOwner whenNotPaused
+    {
+        require(keccak256(abi.encodePacked(mintPrice)) != keccak256(abi.encodePacked(newMintPrice)) , "WoofGang: Current state is already what you have selected.");
+        mintPrice = newMintPrice;
+    }
+&nbsp;
+    /// @dev This is the function is used for the minting tokens
+    /// @param quantity `quantity` is the number to mint
+&nbsp;
+    function mint(uint256 quantity) external override payable whenNotPaused nonReentrant
+    {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(MAX_SUPPLY &gt;= totalSupply, "WoofGang: Maximum supply is exceed");
+        require(block.timestamp &lt;= mintEndTime , "WoofGang: Mint process is ended");
+        require(quantity &lt;= MAX_SUPPLY-totalSupply , "WoofGang: Amount is more than remanining tokens");
+        require(msg.value &gt;= (mintPrice)*quantity, "WoofGang: Insufficient ETH supplied");
+&nbsp;
+        for(uint16 i=0; i &lt; quantity; i++){
+            uint256 tokenId = _getRandomNFTTokenID();
+            _mint(msg.sender, tokenId, NFT_AMOUNT, "");
+            totalSupply++;
+            emit newNFTCreated(tokenId);
+        }
+    }
+&nbsp;
+    /// @dev This function is used for the airdrop tokens to the given account and amount of tokens.
+    /// @dev Only the owner can call this function
+    /// @param account we need to put account address where owner wants to make Airdrop
+&nbsp;
+    function airDrop(address[] calldata account , uint256[] calldata quantity) external override onlyOwner whenNotPaused {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(account.length == quantity.length, "WoofGang: Incorrect parameter length");
+        for(uint16 i=0; i&lt;account.length; i++){
+            <span class="missing-if-branch" title="else path not taken" >E</span>require(quantity[i] &lt;= MAX_SUPPLY-totalSupply , "WoofGang: Amount is more than remanining tokens");
+            for(uint16 j=0; j&lt;quantity[i];j++){
+                <span class="missing-if-branch" title="else path not taken" >E</span>require(MAX_SUPPLY &gt;= totalSupply, "WoofGang: Maximum supply is exceed");
+                uint256 tokenId = _getRandomNFTTokenID();
+                _mint(account[i], tokenId, NFT_AMOUNT, "");
+                totalSupply++;
+                emit NFTAirDrop(tokenId);
+            } 
+        }
+    }
+&nbsp;
+&nbsp;
+    /// @dev This function is used for airdrop the tokens to owner which is not minted
+    /// @dev Only the owner can call this function
+    /// @param batchSize `batchSize` is used to send the number of token ids. 
+&nbsp;
+    function mintRemainingToOwner(uint256 batchSize) external override onlyOwner whenNotPaused 
+    {
+        require(block.timestamp &gt;= mintEndTime , "WoofGang: Mint process is in progress");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(MAX_SUPPLY &gt;= totalSupply, "WoofGang: Maximum supply is exceed");
+        require(batchSize &lt;= MAX_SUPPLY-totalSupply , "WoofGang: Amount is more than remanining tokens");
+&nbsp;
+        for(uint i = 0; i &lt; batchSize; i++) {
+            uint256 tokenId = _getNextRemainingTokenID();
+            _mint(msg.sender, tokenId ,NFT_AMOUNT, "");
+            totalSupply++;
+            emit NFTAirDrop(tokenId);
+        }
+    }
+&nbsp;
+    /// @dev The external function for withdraw the amount of share hold by the account 
+    /// @param account The account address in which the ether to be send
+    /// @param amount `amount` is used to send the number of token ids.
+&nbsp;
+    function withdraw(address payable account , uint256 amount) external override onlyOwner whenNotPaused nonReentrant 
+    {
+        require(account != ZERO_ADDRESS, "WoofGang: Cannot withdraw to Zero Address");
+        require(address(this).balance &gt; amount,"WoofGang: insufficient ether in contract");
+        payable(account).transfer(amount);
+    }
+&nbsp;
+    /// @dev The external function is used to check the balance of contract
+&nbsp;
+    function balanceOfContract() external view returns(uint256) 
+    {
+       return address(this).balance;
+    }
+&nbsp;
+    /// @dev Overridden function called before every token transfer
+&nbsp;
+    function _beforeTokenTransfer(address operator, address from, address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
+        internal
+        whenNotPaused
+        override(ERC1155)
+    {
+        super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 19 2022 00:28:53 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
